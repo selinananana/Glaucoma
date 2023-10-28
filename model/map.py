@@ -37,7 +37,7 @@ def start(file_test_list):
         binaryImage = cv2.adaptiveThreshold(grayImage, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 35, 10)
         #cv2.imshow("binaryImage", ~binaryImage)
         binaryImage = ~binaryImage
-        # 这里我本来准备进行形态学操作的，可根据图片质量来取舍是否需要进行该操作，有些图片操作会好点
+        # 形态学操作，可根据图片质量来取舍是否需要进行该操作
         # kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (1, 1))
         # binaryImage = cv2.erode(binaryImage, kernel, iterations=1)
         # binaryImage = cv2.dilate(binaryImage, kernel, iterations=1)
