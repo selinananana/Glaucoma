@@ -48,7 +48,7 @@ def preprocess_image(image_path):
 
     # Create an ImageDataGenerator with desired preprocessing options
     datagen = ImageDataGenerator(
-        # Add your desired preprocessing options here
+        # Add your desired preprocessing options here binary matrix conversion
     )
 
     # Preprocess the image using the ImageDataGenerator
@@ -61,6 +61,7 @@ def preprocess_image(image_path):
 single_image_path =r'C:\Users\lx\Desktop\Glaucoma\IdeaProject\Glaucoma\image\deblur/1.jpg'
 single_image = preprocess_image(single_image_path)
 single_image_prediction = model.predict(single_image)
-predicted_class = np.argmax(single_image_prediction)
+predicted_class = np.argmax(single_image_prediction) 
+# maximize to output the probability predicted
 print(predicted_class)
 #print('Image:', single_image_path, 'Predicted class:', predicted_class)
